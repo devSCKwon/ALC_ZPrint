@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsApp4.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="jsonUrl" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://data.ex.co.kr/openapi/safeDriving/forecast?key=test&amp;type=json</Value>
+    </Setting>
+    <Setting Name="zplDataType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ALC(55×25)</Value>
+    </Setting>
+    <Setting Name="companyList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z02, Z03</Value>
+    </Setting>
+    <Setting Name="optionList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CN7:Z02, CN7N:Z01</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
