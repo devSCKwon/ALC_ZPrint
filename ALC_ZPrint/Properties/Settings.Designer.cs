@@ -12,7 +12,7 @@ namespace ALC_ZPrint.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -23,16 +23,13 @@ namespace ALC_ZPrint.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://data.ex.co.kr/openapi/safeDriving/forecast?key=test&type=json")]
         public string jsonUrl {
             get {
                 return ((string)(this["jsonUrl"]));
-            }
-            set {
-                this["jsonUrl"] = value;
             }
         }
         
@@ -62,7 +59,7 @@ namespace ALC_ZPrint.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("CN7:Z02, CN7N:Z01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("CN7:Z01, CN7N:Z01")]
         public string optionList {
             get {
                 return ((string)(this["optionList"]));

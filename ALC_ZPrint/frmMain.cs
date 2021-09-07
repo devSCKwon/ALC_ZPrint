@@ -76,6 +76,11 @@ namespace ALC_ZPrint
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            ZPL_Print();
+        }
+
+        private void ZPL_Print()
+        {
             this.SendZplOverTcp(printIpAddress, ReturnZplData(this.txtPNO.Text, this.txtALC.Text, _zplDataType));
             this.txtTemp.Text = ReturnZplData(this.txtPNO.Text, this.txtALC.Text, _zplDataType);
             //stutus 설정변경
@@ -188,6 +193,11 @@ namespace ALC_ZPrint
 
         private void btnShowJson_Click(object sender, EventArgs e)
         {
+            ShowJson();
+        }
+
+        private void ShowJson()
+        {
             using (StreamReader file = File.OpenText(jsonFileTempPath))
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
@@ -201,7 +211,7 @@ namespace ALC_ZPrint
                     foreach (var temp in json["list"]["options"])
                     {
                         //차종:회사코드 조합이 있는 데이터만 검출
-                        var checkCD = $"{temp["kindcd"]}:{temp["companycd"]}"; 
+                        var checkCD = $"{temp["kindcd"]}:{temp["companycd"]}";
                         if (_optionList.Contains(checkCD))
                         {
                             if (this.txtPNO.Text.Equals(temp["apno"].ToString()))
@@ -214,7 +224,6 @@ namespace ALC_ZPrint
                                 if (optionCD.Equals("A5G"))
                                 {
                                     this.panel1.BackColor = Color.FromArgb(0, 51, 102);
-
                                 }
                                 else if (optionCD.Equals("C5G"))
                                 {
@@ -296,6 +305,32 @@ namespace ALC_ZPrint
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //private void txtPNO_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //}
+
+        //private void txtPNO_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    MessageBox.Show(e.KeyChar.ToString());
+        //    //if (e.KeyChar.Equals(Keys.Return))
+        //    //{
+        //    //    this.txtPNO.SelectAll();
+        //    //    ShowJson();
+        //    //    ZPL_Print();
+        //    //}
+        //}
+
+        private void txtPNO_KeyDown(object sender, KeyEventArgs e)
+        {
+            //MessageBox.Show(e.KeyChar.ToString());
+            if (e.KeyCode.Equals(Keys.Tab))
+            {
+                this.txtPNO.SelectAll();
+                ShowJson();
+                ZPL_Print();
+            }
         }
     }
 }

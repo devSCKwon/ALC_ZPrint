@@ -135,6 +135,8 @@ namespace ALC_ZPrint
             this.txtPNO.Name = "txtPNO";
             this.txtPNO.Size = new System.Drawing.Size(261, 21);
             this.txtPNO.TabIndex = 1;
+            this.txtPNO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPNO_KeyDown);
+            //this.txtPNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPNO_KeyPress);
             // 
             // txtTemp
             // 
