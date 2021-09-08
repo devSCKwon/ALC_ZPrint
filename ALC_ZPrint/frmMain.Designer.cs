@@ -47,7 +47,6 @@ namespace ALC_ZPrint
             this.tsmiZPLData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiZPLDataOption1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiZPLDataOption2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiZPLDataOption3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiZPLSave = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiZPLExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,7 +135,6 @@ namespace ALC_ZPrint
             this.txtPNO.Size = new System.Drawing.Size(261, 21);
             this.txtPNO.TabIndex = 1;
             this.txtPNO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPNO_KeyDown);
-            //this.txtPNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPNO_KeyPress);
             // 
             // txtTemp
             // 
@@ -206,7 +204,7 @@ namespace ALC_ZPrint
             this.tsmiOptionList.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tstbOptionListData});
             this.tsmiOptionList.Name = "tsmiOptionList";
-            this.tsmiOptionList.Size = new System.Drawing.Size(144, 22);
+            this.tsmiOptionList.Size = new System.Drawing.Size(180, 22);
             this.tsmiOptionList.Text = "Option List";
             this.tsmiOptionList.Click += new System.EventHandler(this.tsmiOptionList_Click);
             // 
@@ -219,7 +217,7 @@ namespace ALC_ZPrint
             // tsmiURL
             // 
             this.tsmiURL.Name = "tsmiURL";
-            this.tsmiURL.Size = new System.Drawing.Size(144, 22);
+            this.tsmiURL.Size = new System.Drawing.Size(180, 22);
             this.tsmiURL.Text = "Data URL";
             this.tsmiURL.Click += new System.EventHandler(this.tsmiURL_Click);
             // 
@@ -227,10 +225,9 @@ namespace ALC_ZPrint
             // 
             this.tsmiZPLData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiZPLDataOption1,
-            this.tsmiZPLDataOption2,
-            this.tsmiZPLDataOption3});
+            this.tsmiZPLDataOption2});
             this.tsmiZPLData.Name = "tsmiZPLData";
-            this.tsmiZPLData.Size = new System.Drawing.Size(144, 22);
+            this.tsmiZPLData.Size = new System.Drawing.Size(180, 22);
             this.tsmiZPLData.Text = "Barcode SIZE";
             this.tsmiZPLData.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsmiZPLData_DropDownItemClicked);
             // 
@@ -238,7 +235,7 @@ namespace ALC_ZPrint
             // 
             this.tsmiZPLDataOption1.CheckOnClick = true;
             this.tsmiZPLDataOption1.Name = "tsmiZPLDataOption1";
-            this.tsmiZPLDataOption1.Size = new System.Drawing.Size(140, 22);
+            this.tsmiZPLDataOption1.Size = new System.Drawing.Size(180, 22);
             this.tsmiZPLDataOption1.Text = "ALC(55×25)";
             this.tsmiZPLDataOption1.Click += new System.EventHandler(this.tsmiZPLDataOption_Click);
             // 
@@ -246,35 +243,27 @@ namespace ALC_ZPrint
             // 
             this.tsmiZPLDataOption2.CheckOnClick = true;
             this.tsmiZPLDataOption2.Name = "tsmiZPLDataOption2";
-            this.tsmiZPLDataOption2.Size = new System.Drawing.Size(140, 22);
-            this.tsmiZPLDataOption2.Text = "ALC(55×35)";
+            this.tsmiZPLDataOption2.Size = new System.Drawing.Size(180, 22);
+            this.tsmiZPLDataOption2.Text = "ALC(50×20)";
             this.tsmiZPLDataOption2.Click += new System.EventHandler(this.tsmiZPLDataOption_Click);
-            // 
-            // tsmiZPLDataOption3
-            // 
-            this.tsmiZPLDataOption3.CheckOnClick = true;
-            this.tsmiZPLDataOption3.Name = "tsmiZPLDataOption3";
-            this.tsmiZPLDataOption3.Size = new System.Drawing.Size(140, 22);
-            this.tsmiZPLDataOption3.Text = "ALC(70×40)";
-            this.tsmiZPLDataOption3.Click += new System.EventHandler(this.tsmiZPLDataOption_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // tsmiZPLSave
             // 
             this.tsmiZPLSave.Name = "tsmiZPLSave";
             this.tsmiZPLSave.ShowShortcutKeys = false;
-            this.tsmiZPLSave.Size = new System.Drawing.Size(144, 22);
+            this.tsmiZPLSave.Size = new System.Drawing.Size(180, 22);
             this.tsmiZPLSave.Text = "설정저장(&S)";
             this.tsmiZPLSave.Click += new System.EventHandler(this.tsmiZPLSave_Click);
             // 
             // tsmiZPLExit
             // 
             this.tsmiZPLExit.Name = "tsmiZPLExit";
-            this.tsmiZPLExit.Size = new System.Drawing.Size(144, 22);
+            this.tsmiZPLExit.Size = new System.Drawing.Size(180, 22);
             this.tsmiZPLExit.Text = "설정종료(&X)";
             this.tsmiZPLExit.Click += new System.EventHandler(this.tsmiZPLExit_Click);
             // 
@@ -322,7 +311,6 @@ namespace ALC_ZPrint
         private System.Windows.Forms.ToolStripMenuItem tsmiZPLSave;
         private System.Windows.Forms.ToolStripMenuItem tsmiZPLDataOption1;
         private System.Windows.Forms.ToolStripMenuItem tsmiZPLDataOption2;
-        private System.Windows.Forms.ToolStripMenuItem tsmiZPLDataOption3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem tsmiZPLExit;

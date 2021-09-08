@@ -144,6 +144,26 @@ namespace ALC_ZPrint
 ^PQ1,0,1,Y^XZ
 ^XZ";
             }
+            else if (pZplDataType.Equals("ALC(50×20)"))
+            {
+                zplData = $@"^XA
+^MMT
+^PW400
+^LL0160
+^LS0
+^FT16,162^BQN,2,6
+^FH
+^FDLA,{pALC}^FS
+^FT161,34^ACN,18,10^FH
+^FD{pPNO}^FS
+^FO160,43^GB198,0,1^FS
+^FT160,109^A0N,65,96^FH
+^FD{pALC}^FS
+^FT161,141^AAN,18,5^FH
+^FD{now}^FS
+^PQ1,0,1,Y^XZ
+";
+            }
             return zplData;
         }
 
@@ -249,7 +269,6 @@ namespace ALC_ZPrint
             //초기화
             this.tsmiZPLDataOption1.Checked = false;
             this.tsmiZPLDataOption2.Checked = false;
-            this.tsmiZPLDataOption3.Checked = false;
 
             ((ToolStripMenuItem)sender).Checked = true;
         }
