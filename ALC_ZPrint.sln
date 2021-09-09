@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALC_ZPrint", "ALC_ZPrint\ALC_ZPrint.csproj", "{A2FC541C-3154-41CD-80E8-F17F9847F138}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALC_SEJIN", "ALC_SEJIN\ALC_SEJIN.csproj", "{9B15A597-4B56-4E4F-955C-DEBE511FB34C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A2FC541C-3154-41CD-80E8-F17F9847F138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2FC541C-3154-41CD-80E8-F17F9847F138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2FC541C-3154-41CD-80E8-F17F9847F138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B15A597-4B56-4E4F-955C-DEBE511FB34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B15A597-4B56-4E4F-955C-DEBE511FB34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B15A597-4B56-4E4F-955C-DEBE511FB34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B15A597-4B56-4E4F-955C-DEBE511FB34C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

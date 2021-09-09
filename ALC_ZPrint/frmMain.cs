@@ -23,6 +23,7 @@ namespace ALC_ZPrint
         //시스템에서 사용할 필요한 사업장공장코드만 입력 받는다.(AppSetting)
         //private static string[] _companyList = { "Z02", "Z03" };
         private static string[] _optionList;
+        private string selectedKindCD;
 
         private static ILog log;
         public frmMain()
@@ -146,6 +147,7 @@ namespace ALC_ZPrint
             }
             else if (pZplDataType.Equals("ALC(50×20)"))
             {
+                string temp = string.Concat("(", this.selectedKindCD, ") ", pPNO);
                 zplData = $@"^XA
 ^MMT
 ^PW400
@@ -154,12 +156,14 @@ namespace ALC_ZPrint
 ^FT16,162^BQN,2,6
 ^FH
 ^FDLA,{pALC}^FS
-^FT161,34^ACN,18,10^FH
+^FT159,31^ACN,18,10^FH
+^FD{this.selectedKindCD}^FS
+^FT159,49^ACN,18,10^FH
 ^FD{pPNO}^FS
-^FO160,43^GB198,0,1^FS
-^FT160,109^A0N,65,96^FH
+^FO158,54^GB198,0,1^FS
+^FT158,118^A0N,65,98^FH
 ^FD{pALC}^FS
-^FT161,141^AAN,18,5^FH
+^FT158,145^AAN,18,5^FH
 ^FD{now}^FS
 ^PQ1,0,1,Y^XZ
 ";
@@ -226,6 +230,7 @@ namespace ALC_ZPrint
                     this.btnPrint.Enabled = false;
                     this.txtALC.Text = string.Empty;
                     this.txtTemp.Text = string.Empty;
+                    this.selectedKindCD = string.Empty;
                     this.panel1.BackColor = Color.White;
 
                     foreach (var temp in json["list"]["options"])
@@ -236,6 +241,7 @@ namespace ALC_ZPrint
                         {
                             if (this.txtPNO.Text.Equals(temp["apno"].ToString()))
                             {
+                                this.selectedKindCD = temp["kindcd"].ToString();
                                 this.txtALC.Text = temp["alccd"].ToString();
                                 this.txtTemp.Text = temp.ToString();
                                 this.btnPrint.Enabled = true;
