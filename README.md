@@ -9,4 +9,3 @@
     3. Json 파일과 매핑된 정보에 따라 ALC Code 색상확인
     4. 실행시 특정행위에 따라 Log4net 지원 (txt 파일로 로그생성하도록 기록)
         - 로그 기록 방법 개발방법 참조링크 <https://kinanadel.blogspot.com/2019/06/log4j-c-visual-studio-log-management.html>
-
